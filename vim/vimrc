@@ -1,0 +1,61 @@
+set nocompatible
+set encoding=utf-8
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+" Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" Color Scheme
+Plugin 'flazz/vim-colorschemes'
+" Auto complete
+Plugin 'AutoComplPop'
+" JSON
+Plugin 'elzr/vim-json'
+" GIT
+Plugin 'tpope/vim-fugitive'
+call vundle#end()
+
+" General
+syntax on
+set t_Co=256 "add support of  256 Colors in terminal to airline_theme
+set number
+set numberwidth=5
+set mouse=r
+set background=dark
+set colorcolumn=120
+set noswapfile
+set ignorecase
+set spell
+set listchars=tab:→-,trail:·
+" Formatting
+set autoindent
+set expandtab
+set nowrap
+set modeline
+set ls=2
+set ts=4
+set bs=2
+set shiftwidth=4
+set softtabstop=4
+set pastetoggle=<F12>
+set list
+" Vim-airline
+let g:solarized_termcolors=265
+let g:airline_theme='luna'
+let g:vim_json_syntax_conceal = 0
+" colorscheme solarized
+" Clipboard
+set clipboard=unnamed
+filetype plugin indent on
+
+autocmd FileType javascript setlocal ts=2 shiftwidth=2 softtabstop=2
+autocmd Filetype css setlocal ts=2 shiftwidth=2 softtabstop=4
+autocmd Filetype html setlocal ts=2 shiftwidth=2 softtabstop=4
+autocmd FileType json setlocal ts=2 shiftwidth=2 softtabstop=4
+autocmd Filetype php setlocal ts=4 softtabstop=4
+
+
